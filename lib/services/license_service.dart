@@ -1,7 +1,7 @@
 import '../interfaces/license_test.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class RestaurantService {
+class LicenseService {
   Future<List<LicenseTest>> getLicenseTest1() async {
     final querySnapshot = await FirebaseFirestore.instance
         .collection("driverData")

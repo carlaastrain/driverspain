@@ -26,7 +26,7 @@ class LicenseTest {
     return LicenseTest(
       id: id,
       testId: map['testId'],
-      questionsId: map['questionsId'],
+      questionsId: map['questionId'],
       question: map['question'],
       options: map['options'],
       correctIndex: map['correctIndex'],

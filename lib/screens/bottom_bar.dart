@@ -30,10 +30,6 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('whateveroo'),
-      //   backgroundColor: Colors.indigo[400],
-      // ),
       body: _widgetOptions[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onItemTapped,

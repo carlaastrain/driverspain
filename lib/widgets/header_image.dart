@@ -12,7 +12,6 @@ class _HeaderImageState extends State<HeaderImage> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 200,
-      width: double.infinity,
       child: Container(
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
