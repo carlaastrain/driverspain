@@ -1,19 +1,23 @@
+import 'package:driver_spain_app/interfaces/ids_tests.dart';
 import 'package:flutter/material.dart';
 
-import '../../interfaces/license_test.dart';
-
 class Test extends StatelessWidget {
-  final LicenseTest licenseTest;
-  const Test({super.key, required this.licenseTest});
+  final LicenseIds licenseTestIdGroup;
+  const Test({super.key, required this.licenseTestIdGroup});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200,
-      height: 200,
-      child: Card(
-        child: Center(
-          child: Text(" ${licenseTest.question} "),
+      width: 150,
+      height: 150,
+      child: Container(
+        margin: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(licenseTestIdGroup.imagen),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
     );

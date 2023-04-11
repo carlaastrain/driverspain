@@ -18,9 +18,9 @@ class _HeaderHomeState extends State<HeaderHome> {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text("Hello", style: Styles.headlineStyle1),
+          Text("Hola", style: Styles.headlineStyle1),
           const Gap(5),
-          Text('Time to learn',
+          Text('Hora de aprender',
               style: Styles.headlineStyle3.copyWith(color: Colors.grey)),
         ]),
         Column(

@@ -15,8 +15,7 @@ Future<void> setup() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  final licenseService = LicenseService();
-  GetIt.I.registerSingleton<LicenseService>(licenseService);
+  GetIt.I.registerLazySingleton(() => LicenseService());
 }
 
 class MyApp extends StatelessWidget {
