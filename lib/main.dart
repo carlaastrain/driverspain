@@ -1,4 +1,4 @@
-import 'package:driver_spain_app/screens/bottom_bar.dart';
+import 'package:driver_spain_app/screens/tabs_bottom.dart';
 import 'package:driver_spain_app/services/license_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BottomBar(),
+      home: const TabsBottom(),
     );
   }
 }

@@ -5,14 +5,14 @@ import 'stats_screen.dart';
 import 'challenge_screen.dart';
 import 'settings_screen.dart';
 
-class BottomBar extends StatefulWidget {
-  const BottomBar({super.key});
+class TabsBottom extends StatefulWidget {
+  const TabsBottom({super.key});
 
   @override
-  State<BottomBar> createState() => _BottomBarState();
+  State<TabsBottom> createState() => _TabsBottomState();
 }
 
-class _BottomBarState extends State<BottomBar> {
+class _TabsBottomState extends State<TabsBottom> {
   static final List<Widget> _widgetOptions = <Widget>[
     MyHomeScreen(),
     const StatsScreen(),

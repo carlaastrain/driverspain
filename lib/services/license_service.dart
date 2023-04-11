@@ -39,6 +39,7 @@ class LicenseService {
         .collection("testGroupsData")
         .where("difficulty", isEqualTo: "mostpopular")
         .get();
+
     return querySnapshot.docs
         .map(
           (doc) => LicenseIds.fromMap(
