@@ -1,4 +1,5 @@
 class LicenseTest {
+  final String id;
   final int testId;
   final int questionsId;
   final String question;
@@ -8,6 +9,7 @@ class LicenseTest {
   final String imagen;
 
   LicenseTest({
+    required this.id,
     required this.testId,
     required this.questionsId,
     required this.question,
@@ -22,6 +24,7 @@ class LicenseTest {
     required Map<String, dynamic> map,
   }) {
     return LicenseTest(
+      id: id,
       testId: map['testId'],
       questionsId: map['questionsId'],
       question: map['question'],

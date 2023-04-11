@@ -1,5 +1,6 @@
 import 'package:driver_spain_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import '../utils/app_styles.dart';
 import 'stats_screen.dart';
 import 'challenge_screen.dart';
 import 'settings_screen.dart';
@@ -40,25 +41,25 @@ class _BottomBarState extends State<BottomBar> {
         elevation: 10.0,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Colors.indigo[400],
+        selectedItemColor: Styles.orangeDark,
         unselectedItemColor: Colors.grey[400],
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.car_repair),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+            icon: Icon(Icons.bar_chart),
+            label: 'Stats',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.airplane_ticket),
-            label: 'Ticket',
+            icon: Icon(Icons.flag),
+            label: 'Challenge',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
       ),
