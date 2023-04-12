@@ -16,6 +16,7 @@ class QuestionsSection extends StatefulWidget {
 class _QuestionsSectionState extends State<QuestionsSection> {
   final licenseService = GetIt.I<LicenseService>();
   int _selectedValue = -1;
+  int _isCorrect = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +49,11 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                 const Gap(15),
                 CustomRadio(
                   isSelected: _selectedValue == 1,
+                  isCorrect: _isCorrect == 1,
                   onTap: () {
                     setState(() {
                       _selectedValue = 1;
+                      _isCorrect = 1;
                     });
                   },
                   label: snapshot.data![0].options[0]['answer'],
@@ -58,9 +61,11 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                 const Gap(15),
                 CustomRadio(
                   isSelected: _selectedValue == 2,
+                  isCorrect: _isCorrect == 2,
                   onTap: () {
                     setState(() {
                       _selectedValue = 2;
+                      _isCorrect = 2;
                     });
                   },
                   label: snapshot.data![0].options[1]['answer'],
@@ -68,9 +73,11 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                 const Gap(15),
                 CustomRadio(
                   isSelected: _selectedValue == 3,
+                  isCorrect: _isCorrect == 3,
                   onTap: () {
                     setState(() {
                       _selectedValue = 3;
+                      _isCorrect = -1;
                     });
                   },
                   label: snapshot.data![0].options[2]['answer'],
