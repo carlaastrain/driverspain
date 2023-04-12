@@ -14,6 +14,8 @@ class Test extends StatelessWidget {
         MaterialPageRoute(builder: (context) => const QuestionsTestScreen()),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Row(
             children: [
@@ -36,16 +38,22 @@ class Test extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              const Text(
-                "Preguntas ",
-                style: TextStyle(fontSize: 14),
+              Container(
+                margin: const EdgeInsets.only(right: 10),
+                child: const Text(
+                  "Preguntas ",
+                  style: TextStyle(fontSize: 14),
+                ),
               ),
-              Text(
-                licenseTestIdGroup.quantityQuestions,
-                style: const TextStyle(fontSize: 14),
+              Container(
+                margin: const EdgeInsets.only(right: 14),
+                child: Text(
+                  licenseTestIdGroup.quantityQuestions,
+                  style: const TextStyle(fontSize: 14),
+                ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );
