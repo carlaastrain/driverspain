@@ -20,8 +20,10 @@ class _HeaderHomeState extends State<HeaderHome> {
         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text("Hola", style: Styles.headlineStyle1),
           const Gap(5),
-          Text('Hora de aprender',
-              style: Styles.headlineStyle3.copyWith(color: Colors.grey)),
+          Text(
+            'Hora de aprender',
+            style: Styles.headlineStyle3.copyWith(color: Colors.grey),
+          ),
         ]),
         Column(
           children: [

@@ -58,6 +58,7 @@ class LicenseService {
     final querySnapshot = await FirebaseFirestore.instance
         .collection("driverData")
         .where("testId", isEqualTo: 1)
+        .orderBy("questionId", descending: false)
         .get();
     return querySnapshot.docs
         .map(
@@ -73,6 +74,7 @@ class LicenseService {
     final querySnapshot = await FirebaseFirestore.instance
         .collection("driverData")
         .where("testId", isEqualTo: 2)
+        .orderBy("questionId", descending: false)
         .get();
     return querySnapshot.docs
         .map(
