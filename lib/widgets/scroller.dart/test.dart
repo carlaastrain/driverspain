@@ -1,4 +1,5 @@
 import 'package:driver_spain_app/interfaces/ids_tests.dart';
+import 'package:driver_spain_app/screens/questions_test_screen.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatelessWidget {
@@ -8,6 +9,10 @@ class Test extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => QuestionsTestScreen()),
+      ),
       child: Column(
         children: [
           Row(

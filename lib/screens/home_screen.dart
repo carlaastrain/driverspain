@@ -4,18 +4,14 @@ import 'package:driver_spain_app/widgets/title_scroller.dart';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:get_it/get_it.dart';
 
-import '../services/license_service.dart';
 import '../utils/app_styles.dart';
 import '../widgets/scroller.dart/scroller_easy_tests.dart';
 import '../widgets/scroller.dart/scroller_hard_tests.dart';
 import '../widgets/scroller.dart/scroller_popular_tests.dart';
 
 class MyHomeScreen extends StatelessWidget {
-  final licenseService = GetIt.I<LicenseService>();
-
-  MyHomeScreen({super.key});
+  const MyHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
