@@ -8,7 +8,9 @@ class LicenseService {
     final querySnapshot = await FirebaseFirestore.instance
         .collection("testGroupsData")
         .where("difficulty", isEqualTo: "easy")
+        .orderBy('testIdGroup', descending: false)
         .get();
+
     return querySnapshot.docs
         .map(
           (doc) => LicenseIds.fromMap(
@@ -23,6 +25,7 @@ class LicenseService {
     final querySnapshot = await FirebaseFirestore.instance
         .collection("testGroupsData")
         .where("difficulty", isEqualTo: "hard")
+        .orderBy('testIdGroup', descending: false)
         .get();
     return querySnapshot.docs
         .map(
@@ -38,6 +41,7 @@ class LicenseService {
     final querySnapshot = await FirebaseFirestore.instance
         .collection("testGroupsData")
         .where("difficulty", isEqualTo: "mostpopular")
+        .orderBy('testIdGroup', descending: false)
         .get();
 
     return querySnapshot.docs
