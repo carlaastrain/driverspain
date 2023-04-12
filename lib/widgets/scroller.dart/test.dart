@@ -11,7 +11,7 @@ class Test extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => QuestionsTestScreen()),
+        MaterialPageRoute(builder: (context) => const QuestionsTestScreen()),
       ),
       child: Column(
         children: [
@@ -33,12 +33,16 @@ class Test extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
+              const Text(
+                "Preguntas ",
+                style: TextStyle(fontSize: 14),
+              ),
               Text(
-                "Preguntas ${licenseTestIdGroup.quantityQuestions}",
-                style: const TextStyle(fontSize: 10, color: Colors.grey),
+                licenseTestIdGroup.quantityQuestions,
+                style: const TextStyle(fontSize: 14),
               ),
             ],
           )

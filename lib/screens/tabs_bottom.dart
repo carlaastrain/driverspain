@@ -14,7 +14,7 @@ class TabsBottom extends StatefulWidget {
 
 class _TabsBottomState extends State<TabsBottom> {
   static final List<Widget> _widgetOptions = <Widget>[
-    MyHomeScreen(),
+    const MyHomeScreen(),
     const StatsScreen(),
     const ChallengeScreen(),
     const SettingsScreen(),
