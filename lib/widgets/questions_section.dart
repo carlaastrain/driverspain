@@ -49,11 +49,11 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                 const Gap(15),
                 CustomRadio(
                   isSelected: _selectedValue == 1,
-                  isCorrect: _isCorrect == 1,
+                  isCorrect: _isCorrect == -1,
                   onTap: () {
                     setState(() {
                       _selectedValue = 1;
-                      _isCorrect = 1;
+                      _isCorrect = snapshot.data![0].options[0]['answerSN'];
                     });
                   },
                   label: snapshot.data![0].options[0]['answer'],
@@ -61,11 +61,11 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                 const Gap(15),
                 CustomRadio(
                   isSelected: _selectedValue == 2,
-                  isCorrect: _isCorrect == 2,
+                  isCorrect: _isCorrect == -1,
                   onTap: () {
                     setState(() {
                       _selectedValue = 2;
-                      _isCorrect = 2;
+                      _isCorrect = snapshot.data![0].options[1]['answerSN'];
                     });
                   },
                   label: snapshot.data![0].options[1]['answer'],
@@ -73,11 +73,11 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                 const Gap(15),
                 CustomRadio(
                   isSelected: _selectedValue == 3,
-                  isCorrect: _isCorrect == 3,
+                  isCorrect: _isCorrect == -1,
                   onTap: () {
                     setState(() {
                       _selectedValue = 3;
-                      _isCorrect = -1;
+                      _isCorrect = snapshot.data![0].options[2]['answerSN'];
                     });
                   },
                   label: snapshot.data![0].options[2]['answer'],

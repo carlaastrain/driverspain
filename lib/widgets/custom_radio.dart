@@ -81,7 +81,7 @@ class CustomRadio extends StatelessWidget {
                     SizedBox(
                       width: AppLayout.getScreenWidth() * 0.8,
                       child: Text(label),
-                    )
+                    ),
                   ],
                 ),
     );
