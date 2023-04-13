@@ -1,3 +1,4 @@
+import 'package:driver_spain_app/widgets/bottom_next_question_section.dart';
 import 'package:driver_spain_app/widgets/questions_image_section.dart';
 import 'package:driver_spain_app/widgets/questions_section.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,8 @@ class _QuestionsTestScreenState extends State<QuestionsTestScreen> {
                     QuestionsImageSection(
                       imagen: snapshot.data![0].imagen,
                     ),
-                    const QuestionsSection()
+                    const QuestionsSection(),
+                    const BottomNextQuestionSection(),
                   ],
                 ),
               ),
