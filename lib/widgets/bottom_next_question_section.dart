@@ -7,7 +7,7 @@ class BottomNextQuestionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 56,
+      height: 70,
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [

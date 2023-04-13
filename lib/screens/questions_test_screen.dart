@@ -39,9 +39,9 @@ class _QuestionsTestScreenState extends State<QuestionsTestScreen> {
                       imagen: snapshot.data![0].imagen,
                     ),
                     const QuestionsSection(),
-                    const BottomNextQuestionSection(),
                   ],
                 ),
+                bottomNavigationBar: const BottomNextQuestionSection(),
               ),
       );
     });
