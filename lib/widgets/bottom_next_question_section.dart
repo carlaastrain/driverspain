@@ -24,7 +24,7 @@ class BottomNextQuestionSection extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(20)),
-              color: Colors.grey[200],
+              color: Styles.primaryColor,
             ),
             child: Material(
               type: MaterialType.transparency,
@@ -34,11 +34,11 @@ class BottomNextQuestionSection extends StatelessWidget {
                 },
                 child: Container(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
-                  child: Icon(
+                      const EdgeInsets.symmetric(horizontal: 22, vertical: 4),
+                  child: const Icon(
                     Icons.arrow_back_ios_rounded,
-                    size: 18,
-                    color: Styles.orangeDark,
+                    size: 20,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -47,7 +47,7 @@ class BottomNextQuestionSection extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(20)),
-              color: Colors.grey[200],
+              color: Styles.primaryColor,
             ),
             child: Material(
               type: MaterialType.transparency,
@@ -57,11 +57,11 @@ class BottomNextQuestionSection extends StatelessWidget {
                 },
                 child: Container(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
-                  child: Icon(
+                      const EdgeInsets.symmetric(horizontal: 22, vertical: 4),
+                  child: const Icon(
                     Icons.arrow_forward_ios_rounded,
-                    size: 18,
-                    color: Styles.orangeDark,
+                    size: 20,
+                    color: Colors.white,
                   ),
                 ),
               ),
