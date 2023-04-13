@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import '../services/license_service.dart';
 import '../utils/app_styles.dart';
 import 'custom_radio.dart';
+import 'explanation_answer.dart';
 
 class QuestionsSection extends StatefulWidget {
   const QuestionsSection({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class _QuestionsSectionState extends State<QuestionsSection> {
   final licenseService = GetIt.I<LicenseService>();
   int _selectedValue = -1;
   int _isCorrect = -1;
+  bool _showExplanation = false;
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +56,7 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                     setState(() {
                       _selectedValue = 1;
                       _isCorrect = snapshot.data![0].options[0]['answerSN'];
+                      _showExplanation = true;
                     });
                   },
                   label: snapshot.data![0].options[0]['answer'],
@@ -66,6 +69,7 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                     setState(() {
                       _selectedValue = 2;
                       _isCorrect = snapshot.data![0].options[1]['answerSN'];
+                      _showExplanation = true;
                     });
                   },
                   label: snapshot.data![0].options[1]['answer'],
@@ -78,10 +82,13 @@ class _QuestionsSectionState extends State<QuestionsSection> {
                     setState(() {
                       _selectedValue = 3;
                       _isCorrect = snapshot.data![0].options[2]['answerSN'];
+                      _showExplanation = true;
                     });
                   },
                   label: snapshot.data![0].options[2]['answer'],
                 ),
+                const Gap(10),
+                ExplanationAnswer(showExplanation: _showExplanation),
               ],
             ),
           );

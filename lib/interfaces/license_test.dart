@@ -7,31 +7,32 @@ class LicenseTest {
   final int correctIndex;
   final String answerCorrect;
   final String imagen;
+  final String description;
 
-  LicenseTest({
-    required this.id,
-    required this.testId,
-    required this.questionsId,
-    required this.question,
-    required this.options,
-    required this.correctIndex,
-    required this.answerCorrect,
-    required this.imagen,
-  });
+  LicenseTest(
+      {required this.id,
+      required this.testId,
+      required this.questionsId,
+      required this.question,
+      required this.options,
+      required this.correctIndex,
+      required this.answerCorrect,
+      required this.imagen,
+      required this.description});
 
   factory LicenseTest.fromMap({
     required String id,
     required Map<String, dynamic> map,
   }) {
     return LicenseTest(
-      id: id,
-      testId: map['testId'],
-      questionsId: map['questionId'],
-      question: map['question'],
-      options: map['options'],
-      correctIndex: map['correctIndex'],
-      answerCorrect: map['answerCorrect'],
-      imagen: map['imagen'],
-    );
+        id: id,
+        testId: map['testId'],
+        questionsId: map['questionId'],
+        question: map['question'],
+        options: map['options'],
+        correctIndex: map['correctIndex'],
+        answerCorrect: map['answerCorrect'],
+        imagen: map['imagen'],
+        description: map['description']);
   }
 }

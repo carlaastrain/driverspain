@@ -25,8 +25,10 @@ class Styles {
       TextStyle(fontSize: 21.0, color: textColor, fontWeight: FontWeight.bold);
 
   static TextStyle headlineStyle3 =
-      const TextStyle(fontSize: 17.0, fontWeight: FontWeight.w500);
+      const TextStyle(fontSize: 15.0, fontWeight: FontWeight.w300);
 
   static TextStyle headlineStyle4 = TextStyle(
-      fontSize: 14.0, color: Colors.grey.shade500, fontWeight: FontWeight.w500);
+    fontSize: 12.0,
+    color: Colors.grey.shade800,
+  );
 }
