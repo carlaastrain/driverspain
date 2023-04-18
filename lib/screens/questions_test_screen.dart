@@ -1,5 +1,5 @@
 import 'package:driver_spain_app/widgets/bottom_next_question_section.dart';
-import 'package:driver_spain_app/widgets/questions_image_section.dart';
+import 'package:driver_spain_app/widgets/image_section.dart';
 import 'package:driver_spain_app/widgets/questions_section.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -29,13 +29,14 @@ class _QuestionsTestScreenState extends State<QuestionsTestScreen> {
                 backgroundColor: Styles.bgColor,
                 appBar: AppBar(
                   backgroundColor: Styles.blueMarine,
-                  title: Text('${snapshot.data![0].questionsId}/100',
-                      style:
-                          const TextStyle(color: Colors.white, fontSize: 18)),
+                  title: Text(
+                    '${snapshot.data![0].questionsId} / 100',
+                    style: const TextStyle(color: Colors.white, fontSize: 18),
+                  ),
                 ),
                 body: ListView(
                   children: [
-                    QuestionsImageSection(
+                    ImageSection(
                       imagen: snapshot.data![0].imagen,
                     ),
                     const QuestionsSection(),

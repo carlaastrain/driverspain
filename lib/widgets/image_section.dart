@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class QuestionsImageSection extends StatelessWidget {
+class ImageSection extends StatelessWidget {
   final String imagen;
-  const QuestionsImageSection({super.key, required this.imagen});
+  const ImageSection({super.key, required this.imagen});
 
   @override
   Widget build(BuildContext context) {
