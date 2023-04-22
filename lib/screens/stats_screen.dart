@@ -5,8 +5,8 @@ import 'package:gap/gap.dart';
 
 import '../utils/app_styles.dart';
 import '../widgets/image_section.dart';
-import '../widgets/subtitle_stats.dart';
-import '../widgets/title_stats.dart';
+import '../widgets/subtitle_widget.dart';
+import '../widgets/title_widget.dart';
 
 class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
@@ -20,10 +20,14 @@ class StatsScreen extends StatelessWidget {
           ImageSection(
             imagen: 'testIdGroup1.avif',
           ),
-          TitleStats(),
+          TitleWidget(
+            title: 'Tu Progreso',
+          ),
           ProgressBar(),
           Gap(10),
-          SubtitleStats(),
+          SubtitleWidget(
+            subtitle: 'Completa cada uno de los siguientes elementos:',
+          ),
           Gap(10),
           StatsRow(
             title: 'Test fáciles',

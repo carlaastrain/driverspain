@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-class SubtitleStats extends StatelessWidget {
-  const SubtitleStats({super.key});
+class SubtitleWidget extends StatelessWidget {
+  final String subtitle;
+  const SubtitleWidget({super.key, required this.subtitle});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(10),
-      child: const Text(
-        'Completa cada uno de los siguientes elementos:',
-        style: TextStyle(
+      child: Text(
+        subtitle,
+        style: const TextStyle(
           fontSize: 15,
         ),
       ),

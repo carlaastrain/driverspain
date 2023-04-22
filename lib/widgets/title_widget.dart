@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TitleStats extends StatelessWidget {
-  const TitleStats({super.key});
+class TitleWidget extends StatelessWidget {
+  final String title;
+  const TitleWidget({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(10),
-      child: const Text(
-        'Tu Progreso',
-        style: TextStyle(
+      child: Text(
+        title,
+        style: const TextStyle(
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
