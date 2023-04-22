@@ -30,7 +30,7 @@ class ChallengeScreen extends StatelessWidget {
                 const Gap(20),
                 Icon(
                   Icons.library_books,
-                  size: 90,
+                  size: 95,
                   color: Styles.primaryColor,
                 ),
                 const Gap(30),
