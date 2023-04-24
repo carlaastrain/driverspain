@@ -1,15 +1,17 @@
 import 'package:driver_spain_app/utils/app_layout.dart';
 import 'package:flutter/material.dart';
 
-class RowSettingsWidget extends StatelessWidget {
+class RowSettingsWidgetWithIcon extends StatelessWidget {
   final String radius;
   final String leftText;
-  final String rightText;
-  const RowSettingsWidget(
-      {super.key,
-      required this.radius,
-      required this.leftText,
-      required this.rightText});
+  final IconData icon;
+
+  const RowSettingsWidgetWithIcon({
+    super.key,
+    required this.radius,
+    required this.leftText,
+    required this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +38,17 @@ class RowSettingsWidget extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(leftText),
-                Text(
-                  rightText,
-                  style: const TextStyle(color: Colors.blueAccent),
+                Icon(
+                  icon,
+                  color: Colors.blueAccent,
+                ),
+                Container(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Text(
+                    leftText,
+                    style: const TextStyle(color: Colors.blueAccent),
+                  ),
                 )
               ],
             ),

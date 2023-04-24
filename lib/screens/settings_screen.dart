@@ -1,4 +1,5 @@
 import 'package:driver_spain_app/widgets/settings_widget.dart';
+import 'package:driver_spain_app/widgets/settings_widget_with_icon.dart';
 import 'package:driver_spain_app/widgets/title_2_widget.dart';
 import 'package:driver_spain_app/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
@@ -20,18 +21,28 @@ class SettingsScreen extends StatelessWidget {
             imagen: 'testIdGroup4.avif',
           ),
           const TitleWidget(title: 'Settings'),
-          const Gap(20),
+          const Gap(100),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Title2Widget(title: 'Premium'),
               RowSettingsWidget(
                 radius: 'top',
+                leftText: 'DGT Premium',
+                rightText: 'Hazte con ello',
               ),
               Gap(1),
-              RowSettingsWidget(radius: ''),
+              RowSettingsWidget(
+                radius: '',
+                leftText: 'Ya sos cliente Premium?',
+                rightText: 'Entra',
+              ),
               Gap(1),
-              RowSettingsWidget(radius: 'bottom'),
+              RowSettingsWidget(
+                radius: 'bottom',
+                leftText: 'Resetea los resultados',
+                rightText: 'Reset',
+              ),
             ],
           ),
           const Gap(40),
@@ -39,13 +50,23 @@ class SettingsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Title2Widget(title: 'Disfrutando DriverSpain?'),
-              RowSettingsWidget(
+              RowSettingsWidgetWithIcon(
                 radius: 'top',
+                leftText: 'Comparte',
+                icon: Icons.ios_share_outlined,
               ),
               Gap(1),
-              RowSettingsWidget(radius: ''),
+              RowSettingsWidgetWithIcon(
+                radius: '',
+                leftText: 'Escribi una reseña',
+                icon: Icons.star_border_outlined,
+              ),
               Gap(1),
-              RowSettingsWidget(radius: 'bottom'),
+              RowSettingsWidgetWithIcon(
+                radius: 'bottom',
+                leftText: 'Reporta un problema',
+                icon: Icons.report_outlined,
+              ),
             ],
           ),
         ],
