@@ -7,7 +7,7 @@ class Title2Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.only(left: 18, bottom: 10),
       child: Text(
         title,
         style: const TextStyle(
